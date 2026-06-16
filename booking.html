@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예약하기 | 한옥마을</title>
+    <link rel="stylesheet" href="./styles.css?v=18" />
+  </head>
+  <body class="subpage booking-body">
+    <header class="site-header">
+      <a class="brand" href="./index.html">한옥마을<span>KOREAN TRADITIONAL HOUSE VILLAGE</span></a>
+      <nav>
+        <a href="./stay.html">한옥스테이</a>
+        <a href="./index.html#dining">다이닝</a>
+        <a href="./index.html#event">연회ㆍ대관</a>
+        <a href="./index.html#about">마을소개</a>
+        <a href="./index.html#guide">이용안내</a>
+      </nav>
+      <a class="outline-btn" href="./booking.html">예약하기</a>
+    </header>
+
+    <main class="booking-page">
+      <nav class="booking-steps" aria-label="예약 진행 단계">
+        <a class="active" href="#booking-date" data-step-link="date"><span>01</span>날짜 및 인원 선택</a>
+        <a href="#booking-room" data-step-link="room"><span>02</span>객실 선택</a>
+        <a href="#booking-options" data-step-link="options"><span>03</span>추가 옵션</a>
+        <a href="#booking-summary" data-step-link="summary"><span>04</span>예약 완료</a>
+      </nav>
+
+      <form class="booking-form">
+        <section class="booking-section" id="booking-date" data-step="date">
+          <p class="section-kicker">Date & Guests</p>
+          <h2>날짜 선택</h2>
+          <div class="field-grid">
+            <label>체크인<input type="text" value="2025.06.15 (일)" data-calendar /></label>
+            <label>체크아웃<input type="text" value="2025.06.16 (월)" data-calendar /></label>
+          </div>
+          <h2>인원 선택</h2>
+          <label>인원<select id="guestSelect"><option value="2">성인 2명</option><option value="4">성인 4명</option><option value="6">성인 6명</option><option value="9">성인 9명</option><option value="12">성인 12명</option></select></label>
+          <small>기준 인원 초과 시 추가 요금이 발생합니다.</small>
+        </section>
+
+        <section class="booking-section" id="booking-room" data-step="room">
+          <p class="section-kicker">Stay</p>
+          <h2>객실 선택</h2>
+          <div class="room-choice-list">
+            <label class="room-choice-card">
+              <input type="radio" name="room" value="gibbeun" checked />
+              <span class="choice-check">✓</span>
+              <strong>기쁜날</strong>
+              <em>20평형 · 기준 4인</em>
+              <small>침실 1 · 욕실 1</small>
+            </label>
+            <label class="room-choice-card">
+              <input type="radio" name="room" value="joeun" />
+              <span class="choice-check">✓</span>
+              <strong>좋은날</strong>
+              <em>40평형 · 기준 9인</em>
+              <small>대형 거실 포함</small>
+            </label>
+            <label class="room-choice-card">
+              <input type="radio" name="room" value="meotjin" />
+              <span class="choice-check">✓</span>
+              <strong>멋진날</strong>
+              <em>20평형 · 기준 3인</em>
+              <small>프라이빗 스테이</small>
+            </label>
+          </div>
+        </section>
+
+        <section class="booking-section" id="booking-options" data-step="options">
+          <p class="section-kicker">Options</p>
+          <h2>추가 옵션 <span>(선택 사항)</span></h2>
+          <p>머무는 시간을 더욱 특별하게 만들어보세요.</p>
+          <div class="option-list">
+            <label class="option-card"><input type="checkbox" value="breakfast" data-name="조식" data-price="20000" data-unit="1인" /><span class="choice-check">✓</span><span class="option-image"><img src="./assets/meal.png" alt="조식" /></span><strong>조식</strong><em>1인 ₩20,000</em></label>
+            <label class="option-card"><input type="checkbox" value="spa" data-name="스파" data-price="30000" data-unit="1회" /><span class="choice-check">✓</span><span class="option-image"><img src="./assets/spa.png" alt="스파" /></span><strong>스파</strong><em>1회 ₩30,000</em></label>
+            <label class="option-card"><input type="checkbox" value="bbq" data-name="바베큐" data-price="50000" data-unit="1세트" /><span class="choice-check">✓</span><span class="option-image"><img src="./assets/bbq.png" alt="바베큐" /></span><strong>바베큐</strong><em>1세트 ₩50,000</em></label>
+          </div>
+        </section>
+
+        <section class="booking-section" id="booking-request" data-step="summary">
+          <p class="section-kicker">Request</p>
+          <h2>요청사항 <span>(선택 사항)</span></h2>
+          <textarea maxlength="200" placeholder="요청사항을 입력해주세요."></textarea>
+        </section>
+      </form>
+
+      <aside class="summary-card" id="booking-summary">
+        <figure class="summary-photo"><img id="summaryImage" src="./assets/shop-s1.png" alt="기쁜날 객실" /></figure>
+        <div class="summary-content">
+          <h1 id="summaryRoomName">기쁜날</h1>
+          <p id="summaryDescription">사랑하는 사람들과 편안한 휴식을 즐기기 좋은 아늑한 공간</p>
+          <div class="amenities" id="summaryAmenities"><span>4인</span><span>20평형</span><span>침실 1</span><span>욕실 1</span></div>
+          <h2>예약 요약</h2>
+          <dl><dt>체크인</dt><dd>2025.06.15 (일) 15:00</dd><dt>체크아웃</dt><dd>2025.06.16 (월) 11:00</dd><dt>인원</dt><dd id="summaryGuests">성인 2명</dd><dt>객실</dt><dd id="summaryRoom">기쁜날</dd><dt>추가 옵션</dt><dd id="summaryOptions">선택된 옵션이 없습니다.</dd></dl>
+          <div class="total"><span>총 금액</span><strong id="summaryTotal">₩240,000</strong><small>(VAT 포함)</small></div>
+          <button type="button">예약하기</button>
+          <p class="notice">예약 진행 시 약관 동의가 포함됩니다.</p>
+        </div>
+      </aside>
+      <div class="mobile-total-bar" aria-label="예약 총 금액">
+        <span>총 금액</span>
+        <strong id="mobileSummaryTotal">₩240,000</strong>
+        <a href="#booking-summary">예약하기</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>한옥마을 &nbsp;&nbsp; 주소 : 경기도 광주시 새오개길 39 &nbsp;&nbsp; TEL : 031-766-9677 &nbsp;&nbsp; 대표 : 노동섭 &nbsp;&nbsp; 사업자등록번호 : 702-33-00614</p>
+      <p>Copyright by 2018 Hanokmaeul. All Right Reserved.</p>
+      <div class="socials"><span>◎</span><span>▶</span></div>
+      <p>© 2025 Proudlee Inc. ALL RIGHTS RESERVED.</p>
+    </footer>
+    <script>
+      const rooms = {
+        gibbeun: {
+          name: "기쁜날",
+          description: "사랑하는 사람들과 편안한 휴식을 즐기기 좋은 아늑한 공간",
+          image: "./assets/shop-s1.png",
+          alt: "기쁜날 객실",
+          baseGuests: 4,
+          size: "20평형",
+          rooms: "침실 1",
+          baths: "욕실 1",
+          price: 240000
+        },
+        joeun: {
+          name: "좋은날",
+          description: "모두가 함께 머물기 좋은 넓고 환한 프리미엄 한옥",
+          image: "./assets/shop-s2.png",
+          alt: "좋은날 객실",
+          baseGuests: 9,
+          size: "40평형",
+          rooms: "침실 4",
+          baths: "욕실 2",
+          price: 420000
+        },
+        meotjin: {
+          name: "멋진날",
+          description: "전통과 현대가 조화롭게 만나는 고요한 스위트 공간",
+          image: "./assets/shop-s3.png",
+          alt: "멋진날 객실",
+          baseGuests: 3,
+          size: "20평형",
+          rooms: "침실 2",
+          baths: "욕실 1",
+          price: 300000
+        }
+      };
+
+      const formatWon = value => `₩${value.toLocaleString("ko-KR")}`;
+      const roomInputs = [...document.querySelectorAll("input[name='room']")];
+      const guestSelect = document.querySelector("#guestSelect");
+      const optionInputs = [...document.querySelectorAll(".option-card input")];
+      const calendarInputs = [...document.querySelectorAll("[data-calendar]")];
+
+      function updateSummary() {
+        const selectedRoom = roomInputs.find(input => input.checked);
+        const room = rooms[selectedRoom.value];
+        const guests = Number(guestSelect.value);
+        const selectedOptions = optionInputs.filter(input => input.checked);
+        const extraGuestFee = Math.max(0, guests - room.baseGuests) * 30000;
+        const optionTotal = selectedOptions.reduce((sum, input) => sum + Number(input.dataset.price), 0);
+        const total = room.price + extraGuestFee + optionTotal;
+
+        document.querySelector("#summaryImage").src = room.image;
+        document.querySelector("#summaryImage").alt = room.alt;
+        document.querySelector("#summaryRoomName").textContent = room.name;
+        document.querySelector("#summaryDescription").textContent = room.description;
+        document.querySelector("#summaryAmenities").innerHTML = `<span>${room.baseGuests}인</span><span>${room.size}</span><span>${room.rooms}</span><span>${room.baths}</span>`;
+        document.querySelector("#summaryGuests").textContent = `성인 ${guests}명`;
+        document.querySelector("#summaryRoom").textContent = room.name;
+        document.querySelector("#summaryOptions").textContent = selectedOptions.length
+          ? selectedOptions.map(input => `${input.dataset.name} ${input.dataset.unit}`).join(", ")
+          : "선택된 옵션이 없습니다.";
+        document.querySelector("#summaryTotal").textContent = formatWon(total);
+        document.querySelector("#mobileSummaryTotal").textContent = formatWon(total);
+      }
+
+      roomInputs.forEach(input => input.addEventListener("change", updateSummary));
+      guestSelect.addEventListener("change", updateSummary);
+      optionInputs.forEach(input => input.addEventListener("change", updateSummary));
+      updateSummary();
+
+      const calendarDays = ["15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"];
+      calendarInputs.forEach(input => {
+        const popover = document.createElement("div");
+        popover.className = "mini-calendar";
+        popover.innerHTML = `<strong>2025.06</strong><div>${calendarDays.map(day => `<button type="button">06.${day}</button>`).join("")}</div>`;
+        input.parentElement.appendChild(popover);
+
+        input.addEventListener("focus", () => popover.classList.add("open"));
+        input.addEventListener("click", () => popover.classList.add("open"));
+        popover.addEventListener("click", event => {
+          if (event.target.tagName !== "BUTTON") return;
+          input.value = `2025.${event.target.textContent}`;
+          popover.classList.remove("open");
+        });
+      });
+
+      document.addEventListener("click", event => {
+        calendarInputs.forEach(input => {
+          if (!input.parentElement.contains(event.target)) {
+            input.parentElement.querySelector(".mini-calendar")?.classList.remove("open");
+          }
+        });
+      });
+
+      const stepLinks = [...document.querySelectorAll("[data-step-link]")];
+      const sections = [...document.querySelectorAll("[data-step]")];
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        stepLinks.forEach(link => {
+          link.classList.toggle("active", link.dataset.stepLink === visible.target.dataset.step);
+        });
+      }, { threshold: [0.35, 0.6] });
+      sections.forEach(section => observer.observe(section));
+    </script>
+  </body>
+</html>
