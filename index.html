@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>한옥마을</title>
-    <link rel="stylesheet" href="./styles.css?v=20" />
+    <link rel="stylesheet" href="./styles.css?v=23" />
   </head>
   <body>
     <main class="home">
@@ -20,16 +20,23 @@
 
         <div class="hero-copy">
           <p>계절마다<br />새로운 옷을 바꿔입는 한옥 문화 플랫폼</p>
-          <h1>남한산성을 따라 흘러내리는 천혜의 자연에서 새로운 일상을 선물합니다.</h1>
-          <span>휴식, 디저트, 포토그래피, 문화체험, 쇼핑, 행사 및 세미나 등 고품격 웰니스를 제안하는<br />한옥 문화 플랫폼으로 거듭나고 있습니다.</span>
+          <span><span class="hero-note-line">휴식, 디저트, 포토그래피, 문화체험, 쇼핑, 행사 및 세미나 등 고품격 웰니스를 제안하는</span><br />한옥 문화 플랫폼으로 거듭나고 있습니다.</span>
+          <em class="hero-english">Where Hanok Heritage Meets Premium Wellness<br />Curating moments of relaxation, culture, photography, shopping, and meaningful experiences.</em>
         </div>
 
         <nav class="hero-nav" aria-label="히어로 메뉴">
           <a href="./stay.html">한옥스테이</a>
           <a href="#dining">다이닝</a>
           <a href="#event">연회ㆍ대관</a>
-          <a href="#about">마을 소개</a>
-          <a href="#guide">이용안내</a>
+          <div class="hero-nav-group">
+            <a class="hero-nav-parent" href="#about">마을 소개</a>
+            <div class="hero-subnav" aria-label="마을 소개 하위 메뉴">
+              <a href="#about">한옥마을 소개</a>
+              <a href="#location">오시는길</a>
+              <a href="#activity">액티비티</a>
+              <a href="#gallery">갤러리</a>
+            </div>
+          </div>
         </nav>
       </section>
 
@@ -47,8 +54,10 @@
       <section id="about" class="intro section-screen">
         <div class="intro-art">
           <img class="intro-block" src="./assets/intro-white-block.png" alt="" />
-          <figure class="intro-photo main"><img src="./assets/intro-garden-source.png" alt="한옥 정원" /></figure>
-          <figure class="intro-photo sub"><img src="./assets/intro-door-source.png" alt="전통 목재 문고리" /></figure>
+          <figure class="intro-photo main">
+            <video src="./assets/intro-hanok-video.mp4" autoplay muted loop playsinline aria-label="한옥의 고요한 풍경"></video>
+          </figure>
+          <figure class="intro-photo sub"><img src="./assets/intro-garden-source.png" alt="한옥 정원" /></figure>
         </div>
         <div class="intro-copy">
           <span>깊이 있는 전통의 품에서<br />온전한 쉼을 만나다</span>
@@ -56,7 +65,7 @@
         </div>
       </section>
 
-      <section class="stay-experience section-screen">
+      <section class="stay-experience section-screen" id="gallery">
         <img class="stay-bg" src="./assets/stay-lounge.png" alt="한옥스테이 실내" />
         <article class="stay-panel">
           <p>20평부터 40평까지, 연인부터 가족, 단체 모임까지<br />다양한 구성에 맞는 객실을 만나보세요.</p>
@@ -73,7 +82,7 @@
         <a class="wide-book-button" href="./booking.html">예약하기</a>
       </section>
 
-      <section class="feature-cards section-screen" id="guide">
+      <section class="feature-cards section-screen" id="activity">
         <article id="dining" class="image-card">
           <img src="./assets/tea.png" alt="차와 시간" />
           <div>
@@ -88,14 +97,33 @@
           <div>
             <span>EVENT</span>
             <h2>연회ㆍ대관</h2>
-            <p>돌잔치, 가족모임, 기업 행사 등<br />소중한 순간을 특별하게<br />만들어드립니다.</p>
+            <p>돌잔치, 가족모임, 기업 행사 등 소중한 순간을<br />특별하게 만들어드립니다.</p>
             <a href="#event">자세히 보기</a>
           </div>
         </article>
       </section>
+
+      <section class="village-links" aria-label="마을 안내">
+        <a href="#about">
+          <span>ABOUT</span>
+          한옥마을 소개
+        </a>
+        <a href="#location">
+          <span>LOCATION</span>
+          오시는길
+        </a>
+        <a href="#activity">
+          <span>ACTIVITY</span>
+          액티비티
+        </a>
+        <a href="#gallery">
+          <span>GALLERY</span>
+          갤러리
+        </a>
+      </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="location">
       <p>한옥마을 &nbsp;&nbsp; 주소 : 경기도 광주시 새오개길 39 &nbsp;&nbsp; TEL : 031-766-9677 &nbsp;&nbsp; 대표 : 노동섭 &nbsp;&nbsp; 사업자등록번호 : 702-33-00614</p>
       <p>한옥스테이 &nbsp;&nbsp; 대표 : 진계호 &nbsp;&nbsp; 사업자등록번호 : 104-24-00763</p>
       <p>가례새오개길39 &nbsp;&nbsp; 대표 : 정재현 &nbsp;&nbsp; 사업자등록번호 : 748-03-01010</p>

@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>한옥스테이 | 한옥마을</title>
-    <link rel="stylesheet" href="./styles.css?v=18" />
+    <link rel="stylesheet" href="./styles.css?v=23" />
   </head>
   <body class="subpage">
     <header class="site-header">
       <a class="brand" href="./index.html">한옥마을<span>KOREAN TRADITIONAL HOUSE VILLAGE</span></a>
-      <nav>
+      <nav class="sub-vertical-nav" aria-label="한옥스테이 메뉴">
         <a class="active" href="./stay.html">한옥스테이</a>
         <a href="./index.html#dining">다이닝</a>
         <a href="./index.html#event">연회ㆍ대관</a>
-        <a href="./index.html#about">마을소개</a>
-        <a href="./index.html#guide">이용안내</a>
+        <div class="hero-nav-group">
+          <a class="hero-nav-parent" href="./index.html#about">마을 소개</a>
+          <div class="hero-subnav" aria-label="마을 소개 하위 메뉴">
+            <a href="./index.html#about">한옥마을 소개</a>
+            <a href="./index.html#location">오시는길</a>
+            <a href="./index.html#activity">액티비티</a>
+            <a href="./index.html#gallery">갤러리</a>
+          </div>
+        </div>
       </nav>
       <a class="outline-btn" href="./booking.html">예약하기</a>
     </header>
